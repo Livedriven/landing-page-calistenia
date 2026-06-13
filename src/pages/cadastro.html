@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação</title>
-</head>
-<body>
-    <header></header>
-    <main>
-        <section>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChillingOut - Programação</title>
+        <link rel="stylesheet" href="../style/app.css">
+    </head>
 
-        </section>
-        <section>
-
-        </section>
-    </main>
-    <footer class="footer-conteiner">
-        <h3 class="title-footer">ChillingOut</h3>
-        <ul class="footer-list">
-            <li class="list-item">Política de Privacidade</li>
-            <li class="list-item">Termos de Serviço</li>
-            <li class="list-item">Contato do Suporte</li>
-            <li class="list-item">Artigos de Pesquisa</li>
-        </ul>
-        <p class="footer-p">&copy; 2026 ChillingOut</p>
-    </footer>
-</body>
+    <body>
+        <div class="pagina-cadastro">
+            <main>
+                <header>
+                    <a href="index.html">
+                        <img src="../assets/logo.png" alt="Logo ChillingOut">
+                    </a>
+                    <h1>
+                        Conheça nossa <span>programação.</span>
+                    </h1>
+                    <p>
+                        Encontre o equilíbrio no seu dia a dia com nossas atividades guiadas.
+                        Encontre o momento perfeito para cuidar da sua mente.
+                    </p>
+                    <div class="informacoes-evento">
+                        <p>📅 20/06/2026</p>
+                        <p>🕒 10:00 - 20:30</p>
+                    </div>
+                </header>
+                <section class="atividades">
+                    <div class="linha1">
+                        <div class="card meditacao">
+                            <p class="categoria cat-guia">GUIA</p>
+                            <h2>Meditação Guiada</h2>
+                            <p>Uma sessão profunda de 45 minutos para ancorar sua mente no presente.</p>
+                            <p class="horario">🕒 10:00 - 10:45</p>
+                        </div>
+                        <div class="card breathing">
+                            <p class="categoria cat-educacao">EDUCAÇÃO</p>
+                            <h2>Deep Breathing Workshop</h2>
+                            <p>Aprenda técnicas de respiração para controle imediato da ansiedade.</p>
+                            <p class="horario">🕒 11:30 - 12:30</p>
+                        </div>
+                    </div>
+                    <div class="linha2">
+                        <div class="card dialogo">
+                            <p class="categoria cat-social">SOCIAL</p>
+                            <h2>Círculos de Diálogo</h2>
+                            <p>Um espaço seguro para compartilhar experiências e encontrar apoio mútuo.</p>
+                            <p class="horario">🕒 14:30 - 16:30</p>
+                        </div>
+                        <div class="card silencio">
+                            <img src="../assets/agua.png" alt="Ondas na água" class="img-silencio">
+                            <div class="texto-silencio">
+                                <p class="categoria cat-gratuito">GRATUITO</p>
+                                <h2>Sessão de Silêncio Guiado</h2>
+                                <p>
+                                    Prática voltada para a introspecção e redução de ruído mental,
+                                    além de introduzir às práticas do evento.
+                                </p>
+                                <p class="horario">🕒 17:30 - 18:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <section class="cadastro">
+                <h2>
+                    Comece sua <span>jornada.</span>
+                </h2>
+                <p>
+                    Dê o primeiro passo em direção a uma mente mais tranquila.
+                    Inscreva-se para receber nosso material introdutório gratuito.
+                </p>
+                <form>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    <label for="objetivo">Qual o seu principal objetivo?</label>
+                    <select id="objetivo" name="objetivo">
+                        <option value="" selected disabled>Selecione uma opção...</option>
+                        <option value="reduzir-ansiedade">Reduzir a ansiedade</option>
+                        <option value="meditacao">Aprender meditação</option>
+                        <option value="autoconhecimento">Desenvolver o autoconhecimento</option>
+                        <option value="bem-estar">Melhorar o bem-estar emocional</option>
+                    </select>
+                    <button type="submit">Quero Começar →</button>
+                </form>
+                <p class="privacidade">
+                    Respeitamos sua privacidade. Seus dados estão seguros conosco.
+                </p>
+            </section>
+            <footer>
+                <h2 class="title-footer">ChillingOut</h2>
+                <nav class="nav-footer">
+                    <ul class="footer-list">
+                        <li><a href="#" class="list-item">Política de Privacidade</a></li>
+                        <li><a href="#" class="list-item">Termos de Serviço</a></li>
+                        <li><a href="#" class="list-item">Contato do Suporte</a></li>
+                        <li><a href="#" class="list-item">Artigos de Pesquisa</a></li>
+                    </ul>
+                </nav>
+                <p>© 2026 ChillingOut</p>
+            </footer>
+        </div>
+    </body>
 </html>
