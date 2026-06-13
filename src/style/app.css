@@ -1,0 +1,462 @@
+/* Importações de fontes pelo Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* --- Variáveis Globais --- */
+:root {
+    /* Fontes */
+    --font-title: "Montserrat", sans-serif;
+    --font-text: "Inter", sans-serif;
+
+    /* Cores base */
+    --color-page-bg: #FFFFFF;
+    --color-section-bg: #F9F9F8;
+    --color-card-bg: #F9F9F8;
+    --color-card-highlight-bg: #EAECEB;
+    --color-input-bg: #EFECE6;
+
+    /* Cores de texto */
+    --color-title: #1A1A1A;
+    --color-text: #42484A;
+    --color-text-muted: #687073;
+    --color-text-light: #FFFFFF;
+    --color-tag-social-text: #2C4A3B;
+
+    /* Cores principais */
+    --color-primary: #476169;
+    --color-primary-hover: #364B52;
+    --color-secondary: #7A8E94;
+
+    /* Cores de categorias */
+    --color-category-guide: #476169;
+    --color-category-education: #9D8A78;
+    --color-category-social: #A3C2B3;
+    --color-category-free: #7A8E94;
+
+    /* Cores de borda e sombra */
+    --color-border: #E1E3E2;
+    --color-input-border: #D9D9D9;
+    --color-card-shadow: rgba(83, 119, 142, 0.825);
+
+    /* Pesos */
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Tipografia */
+    --line-height-text: 1.5;
+    --letter-spacing-category: 0.5px;
+
+    --font-size-category: 10px;
+    --font-size-privacy: 12px;
+    --font-size-small: 13px;
+    --font-size-card-text: 14px;
+    --font-size-form: 15px;
+    --font-size-base: 16px;
+    --font-size-footer-title: 20px;
+    --font-size-card-title: 26px;
+    --font-size-section-title: 36px;
+    --font-size-page-title: 42px;
+
+    /* Medidas reutilizáveis */
+    --size-none: 0;
+    --size-border: 1px;
+    --size-line: 2px;
+    --size-shadow-blur: 3px;
+    --size-shadow-spread: 3px;
+    --size-category-padding-y: 6px;
+    --size-radius-small: 8px;
+    --size-space-small: 10px;
+    --size-radius-card: 12px;
+    --size-category-padding-x: 14px;
+    --size-space-md: 15px;
+    --size-input-padding: 16px;
+    --size-button-padding: 18px;
+    --size-space-lg: 20px;
+    --size-space-xl: 25px;
+    --size-space-xxl: 30px;
+    --size-form-padding-top: 40px;
+    --size-space-section: 50px;
+    --size-main-padding-y: 60px;
+    --size-section-padding-y: 80px;
+    --size-image-max-height: 150px;
+    --size-image-width: 200px;
+    --size-text-cadastro-max: 550px;
+    --size-header-text-max: 600px;
+    --size-form-max: 700px;
+    --size-main-max: 1000px;
+
+    /* Porcentagens e grid */
+    --width-full: 100%;
+    --width-form-line-active: 40%;
+    --position-center: 50%;
+    --position-center-negative: -50%;
+    --grid-column-base: 1fr;
+    --grid-column-wide: 1.6fr;
+
+    /* Bordas */
+    --radius-button: 30px;
+    --radius-pill: 100px;
+
+    /* Animações e efeitos */
+    --transition-fast: 0.3s;
+    --card-hover-distance: -7px;
+    --shadow-card-hover: 2px 2px var(--size-shadow-blur) var(--size-shadow-spread) var(--color-card-shadow);
+}
+
+/* --- Reset Global e Body --- */
+* {
+    margin: var(--size-none);
+    padding: var(--size-none);
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3,
+button {
+    font-family: var(--font-title);
+}
+
+.pagina-cadastro {
+    background: var(--color-page-bg);
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+.pagina-cadastro main {
+    max-width: var(--size-main-max);
+    margin: var(--size-none) auto;
+    padding: var(--size-main-padding-y) var(--size-space-lg);
+}
+
+/* --- Tipografia Geral --- */
+h1 {
+    font-family: var(--font-title);
+    font-size: var(--font-size-page-title);
+    text-align: center;
+    color: var(--color-title);
+    margin-bottom: var(--size-space-md);
+}
+
+h1 span {
+    color: var(--color-primary);
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: var(--font-size-card-title);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-title);
+}
+
+p {
+    line-height: var(--line-height-text);
+}
+
+/* --- Header --- */
+.pagina-cadastro header {
+    text-align: center;
+    margin-bottom: var(--size-section-padding-y);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagina-cadastro header img {
+    margin-bottom: var(--size-space-lg);
+    cursor: pointer;
+}
+
+.pagina-cadastro header > p {
+    font-size: var(--font-size-base);
+    max-width: var(--size-header-text-max);
+    color: var(--color-text-muted);
+}
+
+.informacoes-evento {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-space-xl);
+    margin-top: var(--size-space-xl);
+}
+
+.informacoes-evento p {
+    font-size: var(--font-size-card-text);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+/* --- Seção de Atividades (Cards) --- */
+.atividades {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-space-xxl);
+    margin-bottom: var(--size-main-padding-y);
+}
+
+.linha1 {
+    display: grid;
+    grid-template-columns: var(--grid-column-wide) var(--grid-column-base);
+    gap: var(--size-space-xxl);
+}
+
+.linha2 {
+    display: grid;
+    grid-template-columns: var(--grid-column-base) var(--grid-column-wide);
+    gap: var(--size-space-xxl);
+}
+
+.card {
+    border: var(--size-border) solid var(--color-border);
+    border-radius: var(--size-radius-card);
+    padding: var(--size-space-xxl);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--color-card-bg);
+    transition: transform var(--transition-fast) ease;
+}
+
+.card:hover {
+    transform: translateY(var(--card-hover-distance));
+    box-shadow: var(--shadow-card-hover);
+}
+
+.card h2 {
+    margin: var(--size-space-md) var(--size-none) var(--size-space-small) var(--size-none);
+}
+
+.card > p {
+    font-size: var(--font-size-card-text);
+    color: var(--color-text-muted);
+    margin-bottom: auto;
+}
+
+.horario {
+    font-size: var(--font-size-small) !important;
+    font-weight: var(--font-weight-semibold);
+    margin-top: var(--size-space-xxl);
+    color: var(--color-text);
+}
+
+/* Estilização das Tags/Categorias */
+.categoria {
+    font-size: var(--font-size-category);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-category);
+    color: var(--color-text-light) !important;
+    padding: var(--size-category-padding-y) var(--size-category-padding-x);
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+}
+
+.cat-guia {
+    background: var(--color-category-guide);
+}
+
+.cat-educacao {
+    background: var(--color-category-education);
+}
+
+.cat-social {
+    background: var(--color-category-social);
+    color: var(--color-tag-social-text) !important;
+}
+
+.cat-gratuito {
+    background: var(--color-category-free);
+}
+
+/* Fundos específicos dos cards baseados no Figma */
+.meditacao {
+    background: var(--color-card-highlight-bg);
+}
+
+/* Estrutura especial para o Card Silêncio */
+.silencio {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-space-xl);
+}
+
+.img-silencio {
+    width: var(--size-image-width);
+    height: var(--width-full);
+    max-height: var(--size-image-max-height);
+    object-fit: cover;
+    border-radius: var(--size-radius-small);
+}
+
+.texto-silencio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: var(--width-full);
+}
+
+.texto-silencio > p {
+    font-size: var(--font-size-card-text);
+    color: var(--color-text-muted);
+    margin-bottom: auto;
+}
+
+.texto-silencio h2 {
+    margin: var(--size-space-small) var(--size-none);
+}
+
+/* --- Seção de Cadastro --- */
+.cadastro {
+    background: var(--color-section-bg);
+    padding: var(--size-section-padding-y) var(--size-space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: var(--size-border) solid var(--color-border);
+}
+
+.cadastro h2 {
+    font-size: var(--font-size-section-title);
+    margin-bottom: var(--size-space-md);
+}
+
+.cadastro h2 span {
+    color: var(--color-primary);
+}
+
+.cadastro > p {
+    max-width: var(--size-text-cadastro-max);
+    text-align: center;
+    margin-bottom: var(--size-space-section);
+    font-size: var(--font-size-form);
+    color: var(--color-text-muted);
+}
+
+/* Formulário e Linha Decorativa */
+.cadastro form {
+    width: var(--width-full);
+    max-width: var(--size-form-max);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: var(--size-form-padding-top);
+}
+
+.cadastro form::before {
+    content: "";
+    position: absolute;
+    top: var(--size-none);
+    left: var(--size-none);
+    width: var(--width-full);
+    height: var(--size-line);
+    background: var(--color-border);
+}
+
+.cadastro form::after {
+    content: "";
+    position: absolute;
+    top: var(--size-none);
+    left: var(--position-center);
+    transform: translateX(var(--position-center-negative));
+    width: var(--width-form-line-active);
+    height: var(--size-line);
+    background: var(--color-secondary);
+}
+
+.cadastro label {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    margin: var(--size-space-lg) var(--size-none) var(--size-radius-small) var(--size-none);
+}
+
+.cadastro label:first-of-type {
+    margin-top: var(--size-none);
+}
+
+.cadastro input,
+.cadastro select {
+    font-family: var(--font-text);
+    font-size: var(--font-size-form);
+    padding: var(--size-input-padding);
+    border: var(--size-border) solid var(--color-input-border);
+    border-radius: var(--size-radius-small);
+    background-color: var(--color-input-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.cadastro input:focus,
+.cadastro select:focus {
+    border-color: var(--color-primary);
+}
+
+.cadastro button {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-family: var(--font-text);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--size-button-padding);
+    border: none;
+    border-radius: var(--radius-button);
+    cursor: pointer;
+    margin-top: var(--size-space-xxl);
+    transition: background-color var(--transition-fast);
+    width: var(--width-full);
+}
+
+.cadastro button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.privacidade {
+    font-size: var(--font-size-privacy);
+    color: var(--color-text-muted);
+    margin-top: var(--size-space-lg);
+}
+
+/* --- Rodapé --- */
+footer {
+    background: var(--color-section-bg);
+    padding: var(--size-space-xxl) var(--size-main-padding-y);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--size-space-lg);
+}
+
+.title-footer {
+    font-size: var(--font-size-footer-title);
+    color: var(--color-secondary);
+    margin: var(--size-none);
+}
+
+.footer-list {
+    display: flex;
+    gap: var(--size-space-xxl);
+}
+
+.list-item {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    transition: color var(--transition-fast);
+}
+
+.list-item:hover {
+    color: var(--color-primary);
+}
+
+footer p {
+    font-size: var(--font-size-small);
+    color: var(--color-title);
+    font-weight: var(--font-weight-semibold);
+    margin: var(--size-none);
+}
